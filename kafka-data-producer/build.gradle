@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.5.RELEASE'
+        springBootVersion = '2.1.0.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter')
-    implementation('org.springframework.kafka:spring-kafka')
+    compile 'org.springframework.kafka:spring-kafka:2.2.0.RELEASE'
     implementation (
             [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'],
             [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.7'],

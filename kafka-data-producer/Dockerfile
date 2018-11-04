@@ -1,5 +1,7 @@
 FROM openjdk:8
 
-COPY build/libs/kafka-data-producer-0.0.1-SNAPSHOT.jar app.jar
+ENV app_version 0.0.1-SNAPSHOT
+
+COPY build/libs/kafka-data-producer-$app_version.jar app.jar
 
 CMD ["java", "-jar", "app.jar"]
